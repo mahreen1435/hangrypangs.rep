@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css"> 
+</head>
+<body>
+    <h1> Roastery Cafe</h1>
+    <section class="ph"> 
+        <form action="#">
+            <h3> Select Your Booking Details.</h3>
+          <div class="pfields">
+            <div class="date">
+                <select name="Select The Date" id="date">
+                    <option value="Guests" >Select The Date</option>
+                    <option value="Guests" >March 17</option>
+                    <option value="Guests" >March 18</option>
+                    <option value="Guests" >March 19</option>
+                    <option value="Guests" >March 20</option>
+                    <option value="Guests" >March 21</option>
+                </select>
+            </div>
+            <br> 
+            <div class="guests">
+                <select name="guests" id="guests">
+                <option value="Guests" > No. of Guests </option>
+                <option value="Guests" >1</option>
+                <option value="Guests" >2</option>
+                <option value="Guests" ></option>
+                <option value="Guests" >4</option>
+                <option value="Guests" >5</option>
+                <option value="Guests" >6</option>
+                <option value="Guests" >7</option>
+                <option value="Guests" >8</option>
+                <option value="Guests" >9</option>
+                <option value="Guests" >10</option>
+                <option value="Guests" >11</option>
+                <option value="Guests" >12</option>
+                <option value="Guests" >13</option>
+                <option value="Guests" >14</option>
+                <option value="Guests" >15</option>
+                <option value="Guests" >16</option>
+                <option value="Guests" >17</option>
+                <option value="Guests" >18</option>
+                <option value="Guests" >19</option>
+                <option value="Guests" >20</option>
+                </select> 
+            </div>
+          </form>
+        </div>
+          <br>
+                  <div class="gdform"> 
+                <h3> Fill Up The Guest Details</h3>
+                    <form action="#">
+                            <div class="fields">
+                                <div class="field name">
+                                    <input type="First name" placeholder="First name" required>
+                                </div>
+                                <div class="field email">
+                                    <input type="Last Name" placeholder="Last Nmae" optional>
+                                </div>
+                            </div>
+                            <div class="fields2">
+                                <div class="field name">
+                                    <input type="email" placeholder="Email" required>
+                                </div>
+                                <div class="field email">
+                                    <input type="mobile number" placeholder="Mobile Number" required>
+                                </div>
+                            </div> 
+                            <h1>Choose your menu</h1>
+                         
+                            <div class="products" id="products">
+                              <h2>Menu</h2>
+                              <ul class="product-list" id="product-list">
+                                <li>
+                                  <span>biryani </span>
+                                  <span class="price">&#8377 300</span> 
+                                  <button onclick="addToCart('Product A', 300)">Add</button>
+                                </li>
+                                <li>
+                                  <span>Mandi</span>
+                                  <span class="price"> &#8377 550</span>
+                                  <button onclick="addToCart('Product B', 550)">Add</button>
+                                </li>
+                                <li>
+                                  <span>chicken zafrani biryani</span>
+                                  <span class="price">&#8377 300</span>
+                                  <button onclick="addToCart('Product C', 300)">Add</button>
+                                </li>
+                                <li>
+                                  <span>chicken 65 biryani</span>
+                                  <span class="price">&#8377 400</span>
+                                  <button onclick="addToCart('Product C', 400)">Add</button>
+                                </li>
+                                <li>
+                              </ul>
+                            </div>
+                                      <div class="cart" id="cart">
+                                        <h2> chosen Menu </h2>
+                                        <ul class="cartitems" id="cart-items">
+                                        </ul>
+                                        <p>Total &#8377  <span id="cart-total">0.00</span></p>
+                                      </div>
+                        <div class="button-area" id="paybtn">
+                      <button type="submit" ><a href="booking.html"> PAY </button></a> 
+                      </div>
+   </section>
+   <script src="why.js"></script>
+</body>
+</html>

@@ -1,0 +1,809 @@
+/*  import google fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Ubuntu:wght@400;500;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+html{
+    scroll-behavior: smooth;
+}
+
+/* custom scroll bar */
+::-webkit-scrollbar {
+    width: 10px;
+}
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+::-webkit-scrollbar-thumb {
+    background: #888;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+/* all similar content styling codes */
+section{
+    padding: 100px 0;
+}
+.max-width{
+    max-width: 1300px;
+    padding: 0 80px;
+    margin: auto;
+}
+.about, .restro ,.login{
+    font-family: 'Poppins', sans-serif;
+}
+.about .about-content,
+.restro .restro-content .cafe-content,
+.login .loginform{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+section .title{
+    position: relative;
+    text-align: center;
+    font-size: 40px;
+    font-weight: 500;
+    margin-bottom: 60px;
+    padding-bottom: 20px;
+    font-family: 'Ubuntu', sans-serif;
+}
+section .title::before{
+    content: "";
+    position: absolute;
+    bottom: 0px;
+    left: 50%;
+    width: 180px;
+    height: 3px;
+    background: #111;
+    transform: translateX(-50%);
+}
+section .title::after{
+    position: absolute;
+    bottom: -8px;
+    left: 50%;
+    font-size: 20px;
+    color: crimson;
+    padding: 0 5px;
+    background: #fff;
+    transform: translateX(-50%);
+}
+
+/* navbar styling */
+.navbar{
+    position: fixed;
+    width: 100%;
+    z-index: 999;
+    padding: 30px 0;
+    font-family: 'Ubuntu', sans-serif;
+    transition: all 0.3s ease;
+}
+.navbar.sticky{
+    padding: 15px 0;
+    background: crimson;
+}
+.navbar .max-width{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-family: ;
+}
+.navbar .logo a{
+    color: #66347f;
+    font-size: 30px;
+    font-weight: 600;
+    font-family: url("https://www.fontfabric.com/fonts/sprite-graffiti/");
+}
+.navbar .logo a span{
+    color: rgb(255, 150, 252);
+    transition: all 0.3s ease;
+}
+.navbar.sticky .logo a span{
+    color: #fff;
+}
+.navbar .menu li{
+    list-style: none;
+    display: inline-block;
+}
+.navbar .menu li a{
+    display: block;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 500;
+    margin-left: 25px;
+    transition: color 0.3s ease;
+}
+.navbar .menu li a:hover{
+    color: crimson;
+}
+.navbar.sticky .menu li a:hover{
+    color: #fff;
+}
+
+/* menu btn styling */
+.menu-btn{
+    color: #d719e5;
+    font-size: 23px;
+    cursor: pointer;
+    display: none;
+}
+.scroll-up-btn{
+    position: fixed;
+    height: 45px;
+    width: 42px;
+    background: crimson;
+    right: 30px;
+    bottom: 10px;
+    text-align: center;
+    line-height: 45px;
+    color: #000000;
+    z-index: 9999;
+    font-size: 30px;
+    border-radius: 6px;
+    border-bottom-width: 2px;
+    cursor: pointer;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s ease;
+}
+.scroll-up-btn.show{
+    bottom: 30px;
+    opacity: 1;
+    pointer-events: auto;
+}
+.scroll-up-btn:hover{
+    filter: brightness(90%);
+}
+
+
+/* home section styling */
+.home{
+    display: flex;
+    background-color: #e8d3ff;
+}
+.home .max-width{
+  width: 100%;
+  display: flex;
+}
+.home .max-width .row{
+  margin-right: 0;
+}
+.home .home-content .text-1{
+    font-size: 30px;
+    color: rgba(0, 0, 0, 0.808);
+}
+.home .home-content .text-2{
+    font-size: 78px;
+    font-weight: 600;
+    margin-left: -3px;
+    color: #0a0809;
+}
+.home .home-content .text-3{
+    font-size: 45px;
+    margin: 5px 0;
+    color: rgb(1, 1, 1);
+}
+.home .home-content .text-3 span{
+    color: rgb(255, 255, 255);
+    font-weight: 500;
+}
+.ellipse {
+	position: relative;
+	width: 600px;
+	height: 400px;
+	margin: 50px auto;
+	overflow: hidden;
+	border-radius: 50%;
+    margin-left: -50px;
+}
+
+.ellipse img {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 200px;
+	height: 150px;
+	transform-origin:  left right -50px;
+}
+
+.ellipse img:nth-child(1) {
+	transform: rotate(0deg) translate(200px) rotate(0deg);
+    width: 269px;
+    height: 180px;
+    margin-left: 80px;
+}
+
+.ellipse img:nth-child(2) {
+	transform: rotate(72deg) translate(178px) rotate(-72deg);
+    margin-left: -54.5PX;
+    width: 271PX;
+    height: 200px;
+    margin-top: 29.9px;
+}
+
+.ellipse img:nth-child(3) {
+	transform: rotatex(45deg);
+margin-bottom: 50px;
+margin-left: 280px;
+width: 271px;
+height: 350px;
+margin-top: 148px;
+}
+
+.ellipse img:nth-child(4) {
+	transform: rotate(-0.16deg);
+    height: 180px;
+    width: 271px;    
+
+}
+/* about section styling */
+.about {
+    background-color:#ffffff;
+ }
+
+.about .title::after{
+    content: "what we do";
+    color: #d719e5;
+}
+.about .about-content .left{
+    width: 45%;
+}
+.about .about-content .left img{
+    height: 400px;
+    width: 400px;
+    object-fit: cover;
+    border-radius: 6px;
+}
+.about .about-content .right{
+    width: 55%;
+}
+.about .about-content .right .text{
+    font-size: 25px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-style: oblique;
+}
+.about .about-content .right p{
+    text-align: justify;
+    font-family: serif;
+    font-size: 23px;
+    font-style: italic;
+}
+/* restro&cafes section styling */
+.avatar {
+    vertical-align: middle;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+}
+.restro .restro-content {
+    width: 55%;
+}
+.restro {
+    background-color: #e8d3ff;
+    mix-blend-mode: color;
+}
+.restro .restro-content a{
+    display: inline-block;
+    background: rgb(255, 255, 255);
+    color: #fff;
+    font-size: 20px;
+    font-weight: 500;
+    padding: 10px 10px;
+    margin-top: 20px;
+    border-radius: 6px;
+    border: 2px solid rgb(0, 0, 0);
+    transition: all 0.3s ease;
+}
+.restro .restro-content h2{
+    color: darkmagenta;
+    font-size: 50px;
+}
+.restro .restro-content h2 span{
+    color: brown;
+    font-size: 30px;
+}
+.restro .cafe-content a{
+    display: inline-block;
+    background: rgb(255, 255, 255);
+    color: #fff;
+    font-size: 20px;
+    font-weight: 500;
+    padding: 10px 10px;
+    margin-top: 20px;
+    border-radius: 6px;
+    border: 2px solid rgb(0, 0, 0);
+    transition: all 0.3s ease;
+    justify-items:flex-start;
+    justify-content: space-evenly;
+    align-items: center;    
+}
+.restro .cafe-content h2{
+    color: darkmagenta;
+    font-size: 50px;
+}
+.restro .cafe-content h2 span{
+    color: brown;
+    font-size: 30px;
+}
+/*pista house styling*/
+.ph form .pfields {
+    width: 600px;
+    height:500px ;
+    border-radius:6px ;
+    display: flex;
+}
+.ph form .pfields,
+.ph  form .pfields {
+    height: 45px;
+    width: 300px;
+    margin-bottom: 15px;
+}
+.ph  h3{
+    margin-left: 10px;
+}
+.ph form .pfields .date select {
+    height: 50px;
+    width: 300px;
+    border: 1px solid lightgrey;
+    border-radius: 6px;
+    outline: none;
+    padding: 0 15px;
+    font-size: 17px;
+    margin-left: 10px;
+    font-family: 'Poppins', sans-serif;
+    transition: all 0.3s ease;
+}
+.ph form .pfields .guests select {
+    height: 50px;
+    width: 300px;
+    border: 1px solid lightgrey;
+    border-radius: 6px;
+    outline: none;
+    padding: 0 15px;
+    font-size: 17px;
+    margin-left: 50px;
+    font-family: 'Poppins', sans-serif;
+    transition: all 0.3s ease;
+}
+.ph .gdform form .fields input
+{
+    height: 50px;
+    width: 300px;
+    border: 1px solid;
+    border-radius: 6px;
+    padding: 0 20px;
+    font-size: medium;
+    margin-left: 50px;
+    font-family:'Poppins', sans-serif;
+    transition:all 0.5s ease  ;
+}
+.ph .gdform .button-area button{
+    margin-top: 15px;
+    color: #fff;
+    display: block;
+    width: 160px!important;
+    height: 45px;
+    outline: none;
+    font-size: 18px;
+    font-weight: 500;
+    border-radius: 6px;
+    cursor: pointer;
+    flex-wrap: nowrap;
+    background: crimson;
+    border: 2px solid crimson;
+    transition: all 0.3s ease;
+}
+.ph .gdform form .fields {
+    width: 100px;
+    height:60px ;
+    border-radius:6px ;
+    display: flex;
+}
+.ph .gdform form .fields2{
+    margin-top: 3px;
+    width: 100px;
+    height:60px ;
+    border-radius:6px ;
+    display: flex;
+
+}
+.ph .gdform form .fields2 input
+{
+    height: 50px;
+    width: 300px;
+    border: 1px solid;
+    border-radius: 6px;
+    padding: 0 20px;
+    font-size: medium;
+    margin-left: 50px;
+    font-family:'Poppins', sans-serif;
+    transition:all 0.5s ease  ;
+}
+.ph .products .product-list {
+    font-size: 20px;
+}
+.ph .cart p{
+    font-size: 20px;
+}
+.ph .products .product-list li button {
+    color: #fff;
+    display: block;
+    width: 70px!important;
+    height: 20px;
+    outline: none;
+    font-size: 18px;
+    font-weight: 500;
+    border-radius: 6px;
+    flex-wrap: nowrap;
+    background: rgb(223, 39, 240);
+    border: 1px solid rgb(223, 39, 240);
+    transition: all 0.3s ease;
+}
+.ph .products ul li{
+    font: 20px;
+}
+.ph .products ul li button {
+    width: 50px;
+    height: 50px;
+}
+.ph .button-area button {
+    margin-top: 15px;
+    color: #fff;
+    display: block;
+    width: 160px!important;
+    height: 45px;
+    outline: none;
+    font-size: 18px;
+    font-weight: 500;
+    border-radius: 6px;
+    cursor: pointer;
+    flex-wrap: nowrap;
+    background: rgb(223, 39, 240);
+    border: 2px solid black;
+    transition: all 0.3s ease;
+}
+/*form styling*/
+.form form .details input {
+    height: 50px;
+    width: 300px;
+    border: 1px solid;
+    border-radius: 6px;
+    padding: 5px 20px;
+    font-size: medium;
+    margin-left: 50px;
+    font-family:'Poppins', sans-serif;
+    transition:all 0.5s ease  ;
+    
+}
+.form form .date select{
+    height: 50px;
+    width: 300px;
+    border: 1px solid;
+    border-radius: 6px;
+    padding: 0 20px;
+    font-size: medium;
+    margin-left: 50px;
+    font-family:'Poppins', sans-serif;
+    transition:all 0.5s ease  ;
+}
+.form form .guests select{
+    height: 50px;
+    width: 300px;
+    border: 1px solid;
+    border-radius: 6px;
+    padding: 0 20px;
+    font-size: medium;
+    margin-left: 50px;
+    font-family:'Poppins', sans-serif;
+    transition:all 0.5s ease  ;
+}
+.form form .time select {
+    height: 50px;
+    width: 300px;
+    border: 1px solid;
+    border-radius: 6px;
+    padding: 0 20px;
+    font-size: medium;
+    margin-left: 50px;
+    font-family:'Poppins', sans-serif;
+    transition:all 0.5s ease  ;
+}
+.form .button button {
+    color: #fff;
+    display: block;
+    width: 160px!important;
+    height: 45px;
+    outline: none;
+    font-size: 18px;
+    font-weight: 500;
+    border-radius: 6px;
+    cursor: pointer;
+    flex-wrap: nowrap;
+    background: rgb(220, 20, 220);
+    border: 2px solid rgb(236, 20, 211);
+    transition: all 0.3s ease; 
+}
+/* contact section styling */
+
+.login{
+width: 100%;
+height: 100%;
+}
+.login .title::after{
+    content: "get in touch";
+} 
+.login  form .fields input{
+    height: 100%;
+    width: 100%;
+    border: 1px solid lightgrey;
+    border-radius: 6px;
+    outline: none;
+    padding: 0 15px;
+    font-size: 17px;
+    font-family: 'Poppins', sans-serif;
+    transition: all 0.3s ease;
+}
+.login .button-area button{
+    color: #fff;
+    display: block;
+    width: 160px!important;
+    height: 45px;
+    outline: none;
+    font-size: 18px;
+    font-weight: 500;
+    border-radius: 6px;
+    cursor: pointer;
+    flex-wrap: nowrap;
+    background: crimson;
+    border: 2px solid crimson;
+    transition: all 0.3s ease;  
+}
+.login form .fields{
+    display: flex;
+}
+.login  form .field
+{
+    height: 45px;
+    width: 100%;
+    margin-bottom: 15px;
+}
+.login  form .name{
+    margin-right: 10px;
+}
+.login form .fields input{
+    height: 100%;
+    width: 100%;
+    border: 1px solid lightgrey;
+    border-radius: 6px;
+    outline: none;
+    padding: 0 15px;
+    font-size: 17px;
+    font-family: 'Poppins', sans-serif;
+    transition: all 0.3s ease;
+}
+.login form .fields input:focus,
+{
+    border-color: #b3b3b3;
+}
+.login form {
+  padding-top: 10px;
+  resize: none;
+}
+.login .loginform h5{
+    font-size: 20px;
+   
+}
+.login .loginform h5 a{
+    font-size: 20px;
+ 
+} 
+/*register from*/ 
+.signup{
+   border: 1px solid #ccc;
+   padding: 20px;
+   width: 300px;
+   margin: 0 auto;
+   text-align: center;
+   background: linear-gradient(35deg,#ff77cd,#800080);
+   mix-blend-mode: color;
+ 
+}
+
+.signup form .sfields{
+    display:list-item;
+    margin-top: 20px;
+    border-radius: 20px;
+  align-items: center;
+    width: 250px;
+    
+}
+.signup  form .sfield,
+.signup  form .sfields .sfield{
+    height: 45px;
+    width: 100%;
+    margin-bottom: 15px;
+    margin-top: 20px;
+    padding: 20px;
+    min-height: 2px;
+    border-radius: 3px;
+}
+.signup  form .name{
+    margin-right: 10px;
+}
+.signup form .sfields input{
+    height: 100%;
+    width: 100%;
+    border: 1px solid lightgrey;
+    border-radius: 6px;
+    outline: none;
+    padding: 0 15px;
+    font-size: 17px;
+    font-family: 'Poppins', sans-serif;
+    transition: all 0.3s ease;
+}
+.signup form .sfields input:focus,
+{
+    border-color: #b3b3b3;
+}
+.signup form {
+  padding-top: 10px;
+  resize: none;
+}
+.signup .button-area button{
+    color: #fff;
+    display: block;
+    width: 160px!important;
+    height: 45px;
+    outline: none;
+    font-size: 18px;
+    font-weight: 500;
+    border-radius: 6px;
+    cursor: pointer;
+    flex-wrap: nowrap;
+    background: crimson;
+    border: 2px solid crimson;
+    transition: all 0.3s ease;  
+    margin-left: 40px;
+}
+.signup  h5{
+    font-size: 20px;
+}
+.signup h5 a{
+    font-size: 20px;
+}
+
+/* responsive media query start */
+@media (max-width: 1104px) {
+    .about .about-content .left img{
+        height: 350px;
+        width: 350px;
+    }
+}
+
+@media (max-width: 991px) {
+    .max-width{
+        padding: 0 50px;
+    }
+}
+@media (max-width: 947px){
+    .menu-btn{
+        display: block;
+        z-index: 999;
+    }
+    .menu-btn i.active:before{
+        content: "\f00d";
+    }
+    .navbar .menu{
+        position: fixed;
+        height: 100vh;
+        width: 100%;
+        left: -100%;
+        top: 0;
+        background: #111;
+        text-align: center;
+        padding-top: 80px;
+        transition: all 0.3s ease;
+    }
+    .navbar .menu.active{
+        left: 0;
+    }
+    .navbar .menu li{
+        display: block;
+    }
+    .navbar .menu li a{
+        display: inline-block;
+        margin: 20px 0;
+        font-size: 25px;
+    }
+    .home .home-content .text-2{
+        font-size: 70px;
+    }
+    .home .home-content .text-3{
+        font-size: 35px;
+    }
+    .home .home-content a{
+        font-size: 23px;
+        padding: 10px 30px;
+    }
+    .max-width{
+        max-width: 930px;
+    }
+    .about .about-content .column{
+        width: 100%;
+    }
+    .about .about-content .left{
+        display: flex;
+        justify-content: center;
+        margin: 0 auto 60px;
+    }
+    .about .about-content .right{
+        flex: 100%;
+    }
+    .services .serv-content .card{
+        width: calc(50% - 10px);
+        margin-bottom: 20px;
+    }
+    .skills .skills-content .column,
+    .contact .contact-content .column{
+        width: 100%;
+        margin-bottom: 35px;
+    }
+}
+
+@media (max-width: 690px) {
+    .max-width{
+        padding: 0 23px;
+    }
+    .home .home-content .text-2{
+        font-size: 60px;
+    }
+    .home .home-content .text-3{
+        font-size: 32px;
+    }
+    .home .home-content a{
+        font-size: 20px;
+    }
+    .services .serv-content .card{
+        width: 100%;
+    }
+}
+
+@media (max-width: 500px) {
+    .home .home-content .text-2{
+        font-size: 50px;
+    }
+    .home .home-content .text-3{
+        font-size: 27px;
+    }
+    .about .about-content .right .text,
+    .skills .skills-content .left .text{
+        font-size: 19px;
+    }
+    .contact .right form .fields{
+        flex-direction: column;
+    }
+    .contact .right form .name,
+    .contact .right form .email{
+        margin: 0;
+    }
+    .right form .error-box{
+       width: 150px;
+    }
+    .scroll-up-btn{
+        right: 15px;
+        bottom: 15px;
+        height: 38px;
+        width: 35px;
+        font-size: 23px;
+        line-height:q138px;
+    }
+}
